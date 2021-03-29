@@ -1,0 +1,12 @@
+version: '3'
+services:
+  nginx:
+    build: nginx
+    ports:
+      - "8080:8080"
+  haproxy:
+    build: haproxy
+    ports:
+      - "80:80"
+    depends_on:
+      - nginx
