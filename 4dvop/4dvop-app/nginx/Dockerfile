@@ -1,5 +1,5 @@
 FROM ubuntu
-MAINTAINER Alexandre Lion (dev@alexandrelion.com)
+MAINTAINER Saïd Lamkadem
 ENV TZ=Europe/Paris
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN apt-get update \
