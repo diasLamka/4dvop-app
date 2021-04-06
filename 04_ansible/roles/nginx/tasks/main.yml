@@ -1,0 +1,38 @@
+--- 
+  - name: Install nginx 
+    yum: 
+      name=nginx
+      state=present
+  - name: Install git
+    yum:
+      name=git
+      state=present
+  - name: start nginx
+    service:
+        name: nginx
+        state: started
+        enabled: yes
+  - name: remove default nginx
+    file:
+      state: absent
+      path: '/usr/share/nginx/html/'
+  - name: Clone repo
+    git:
+      repo: https://github.com/diranetafen/static-website-example.git
+      dest: '/usr/share/nginx/html'
+      version: master
+  - name: Firewall http
+    firewalld:
+      service: http
+      permanent: yes
+      state: enabled
+  - name: Firewall http
+    firewalld:
+      service: https
+      permanent: yes
+      state: enabled
+  - name: Replace server port
+    replace:
+      path: /etc/nginx/nginx.conf
+      regexp: '80 default_server'
+      replace: '8080 default_server'

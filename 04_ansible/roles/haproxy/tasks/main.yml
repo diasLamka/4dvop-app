@@ -1,0 +1,9 @@
+--- 
+  - name: Install haproxy 
+    yum: 
+      name=haproxy
+      state=present
+  - name: Copy config file
+    copy:
+      src: ../files/haproxy.cfg
+      dest: /etc/haproxy/haproxy.cfg
