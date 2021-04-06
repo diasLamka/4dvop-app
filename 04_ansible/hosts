@@ -1,4 +1,4 @@
 [app]
-192.168.48.159 ansible_user=dias
-192.168.48.159 ansible_python_interpreter=/usr/bin/python3
+127.0.0.1 ansible_user=dias
+127.0.0.1 ansible_python_interpreter=/usr/bin/python3
 
