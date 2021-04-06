@@ -1,5 +1,5 @@
-app_vm ansible_host=192.168.246.134
-[all:vars]
+[app]
+ansible_host=192.168.246.134
 ansible_user=dias
 ansible_ssh_pass=dias
 ansible_sudo_pass=dias
