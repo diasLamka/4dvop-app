@@ -1,0 +1,91 @@
+{
+  "revision_id": "a3824e4f55195bcf165396d426947ee31eb842e4f160bab84a7f9c833a901521",
+  "name": "nginx",
+  "run_list": [
+    "recipe[nginx::default]"
+  ],
+  "included_policy_locks": [
+
+  ],
+  "cookbook_locks": {
+    "chef-sugar": {
+      "version": "5.1.8",
+      "identifier": "07567dff0c225f07889147a6f40f7e30d7913c0b",
+      "dotted_decimal_identifier": "2065423986860639.2120482390733839.138748240149515",
+      "cache_key": "chef-sugar-5.1.8-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/chef-sugar/versions/5.1.8/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/chef-sugar/versions/5.1.8/download",
+        "version": "5.1.8"
+      }
+    },
+    "firewall": {
+      "version": "2.7.0",
+      "identifier": "12fad1a125585c8da0352273151999690ae67972",
+      "dotted_decimal_identifier": "5342327839479900.39864121787880729.168676433492338",
+      "cache_key": "firewall-2.7.0-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/firewall/versions/2.7.0/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/firewall/versions/2.7.0/download",
+        "version": "2.7.0"
+      }
+    },
+    "nginx": {
+      "version": "0.1.0",
+      "identifier": "68f7e096de4b19458c962713bdbea4efe42fa94e",
+      "dotted_decimal_identifier": "29545941553793817.19576349921623486.181350232467790",
+      "source": ".",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "https://github.com/diranetafen/4DVOP.git",
+        "revision": "e0110d73e12552bbdc6ce6d8dd4f35963ba58878",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/HEAD -> origin/master",
+          "origin/master"
+        ]
+      },
+      "source_options": {
+        "path": "."
+      }
+    }
+  },
+  "default_attributes": {
+
+  },
+  "override_attributes": {
+
+  },
+  "solution_dependencies": {
+    "Policyfile": [
+      [
+        "chef-sugar",
+        "= 5.1.8"
+      ],
+      [
+        "firewall",
+        "= 2.7.0"
+      ],
+      [
+        "nginx",
+        ">= 0.0.0"
+      ]
+    ],
+    "dependencies": {
+      "chef-sugar (5.1.8)": [
+
+      ],
+      "firewall (2.7.0)": [
+        [
+          "chef-sugar",
+          ">= 0.0.0"
+        ]
+      ],
+      "nginx (0.1.0)": [
+
+      ]
+    }
+  }
+}
